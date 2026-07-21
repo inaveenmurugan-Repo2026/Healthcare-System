@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Reports
+playwright-report/
+allure-results/
+allure-report/
+test-results/
+
+# Environment
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VS Code settings (optional)
+.vscode/settings.json

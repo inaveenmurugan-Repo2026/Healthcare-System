@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Employee Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header id="pageHeader">
+    <div id="headerLeft">
+      <div id="hospitalLogo" role="img" aria-label="Hospital logo">🏥</div>
+      <h1 id="appTitle">Hospital Employee Management System</h1>
+    </div>
+    <div id="headerRight">
+      <span id="welcomeMessage">Welcome Admin</span>
+      <button type="button" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <div id="appLayout">
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" aria-label="Main navigation">
+      <ul id="sidebarMenu">
+        <li id="dashboardMenuItem">
+          <a href="dashboard.html" id="dashboardMenu">Dashboard</a>
+        </li>
+        <li id="employeeMenuItem">
+          <a href="#" id="employeeMenu">Employees</a>
+        </li>
+        <li id="reportsMenuItem">
+          <a href="#" id="reportsMenu">Reports</a>
+        </li>
+        <li id="settingsMenuItem">
+          <a href="#" id="settingsMenu">Settings</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Dashboard Content -->
+    <main id="mainContent">
+      <section id="dashboardSection" aria-labelledby="dashboardHeading">
+        <h2 id="dashboardHeading">Dashboard</h2>
+        <p id="dashboardSubtitle">Welcome to Hospital Employee Management System</p>
+
+        <!-- Summary Cards -->
+        <div id="summaryCards">
+          <div id="totalEmployeesCard">
+            <h3 id="totalEmployeesLabel">Total Employees</h3>
+            <p id="totalEmployees">0</p>
+          </div>
+          <div id="doctorCountCard">
+            <h3 id="doctorCountLabel">Doctors</h3>
+            <p id="doctorCount">0</p>
+          </div>
+          <div id="nurseCountCard">
+            <h3 id="nurseCountLabel">Nurses</h3>
+            <p id="nurseCount">0</p>
+          </div>
+          <div id="adminCountCard">
+            <h3 id="adminCountLabel">Admin Staff</h3>
+            <p id="adminCount">0</p>
+          </div>
+        </div>
+
+        <!-- Recent Employees -->
+        <section id="recentEmployeesSection" aria-labelledby="recentEmployeesHeading">
+          <h2 id="recentEmployeesHeading">Recent Employees</h2>
+
+          <div id="tableActions">
+            <button type="button" id="addEmployeeBtn">Add Employee</button>
+            <button type="button" id="viewEmployeesBtn">View Employees</button>
+          </div>
+
+          <table id="employeeTable">
+            <thead>
+              <tr>
+                <th scope="col" id="colEmployeeId">Employee ID</th>
+                <th scope="col" id="colEmployeeName">Employee Name</th>
+                <th scope="col" id="colDepartment">Department</th>
+                <th scope="col" id="colRole">Role</th>
+                <th scope="col" id="colStatus">Status</th>
+                <th scope="col" id="colActions">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="pageFooter">
+    <p id="footerText">&copy; 2026 Hospital Employee Management System</p>
+  </footer>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

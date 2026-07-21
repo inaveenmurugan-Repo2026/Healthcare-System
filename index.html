@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Employee Management System - Login</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon (Optional - Add favicon.ico in assets folder if available) -->
+    <!-- <link rel="icon" href="assets/favicon.ico"> -->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="pageHeader">
+        <div id="hospitalLogo" role="img" aria-label="Hospital Logo">
+            🏥
+        </div>
+
+        <h1 id="appTitle">Hospital Employee Management System</h1>
+
+        <p id="appSubtitle">
+            Secure Employee Portal
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+
+        <section id="loginSection" aria-labelledby="loginHeading">
+
+            <h2 id="loginHeading">Employee Login</h2>
+
+            <form id="loginForm" novalidate>
+
+                <!-- Username -->
+                <div id="usernameFieldGroup">
+
+                    <label for="username" id="usernameLabel">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter Username"
+                        autocomplete="username"
+                        required
+                        title="Username is required"
+                        aria-required="true"
+                    >
+
+                </div>
+
+                <!-- Password -->
+                <div id="passwordFieldGroup">
+
+                    <label for="password" id="passwordLabel">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter Password"
+                        autocomplete="current-password"
+                        required
+                        title="Password is required"
+                        aria-required="true"
+                    >
+
+                </div>
+
+                <!-- Error Message -->
+                <div
+                    id="errorMessageContainer"
+                    role="alert"
+                    aria-live="assertive"
+                >
+                    <p id="errorMessage" hidden></p>
+                </div>
+
+                <!-- Login Button -->
+                <button
+                    type="submit"
+                    id="loginBtn"
+                    name="loginBtn">
+                    Login
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="pageFooter">
+
+        <p id="footerText">
+            &copy; 2026 Hospital Employee Management System
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

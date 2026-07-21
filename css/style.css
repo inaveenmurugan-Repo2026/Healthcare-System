@@ -1,0 +1,314 @@
+/* =========================================================
+   Hospital Employee Management System (HEMS)
+   Login Page Stylesheet
+   ========================================================= */
+
+/* -----------------------------
+   1. CSS Variables / Theme
+   ----------------------------- */
+:root {
+  --color-primary: #1565c0;
+  --color-primary-dark: #0d47a1;
+  --color-primary-light: #e3f2fd;
+
+  --color-white: #ffffff;
+  --color-gray-bg: #f4f6f8;
+  --color-gray-border: #d5dce3;
+  --color-gray-text: #6b7785;
+  --color-heading-text: #1e2a38;
+
+  --color-error-bg: #fdecea;
+  --color-error-text: #b3261e;
+  --color-error-border: #f5c2c0;
+
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  --shadow-card: 0 10px 30px rgba(21, 101, 192, 0.12);
+
+  --transition-fast: 0.3s ease;
+
+  --font-base: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+/* -----------------------------
+   2. Reset / Base
+   ----------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-base);
+  background-color: var(--color-gray-bg);
+  color: var(--color-heading-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* -----------------------------
+   3. Page Header
+   ----------------------------- */
+#pageHeader {
+  width: 100%;
+  padding: 24px 16px 8px;
+  text-align: center;
+  background-color: var(--color-gray-bg);
+}
+
+/* Logo */
+#hospitalLogo {
+  font-size: 48px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* App Title */
+#appTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-heading-text);
+  letter-spacing: 0.2px;
+}
+
+/* App Subtitle */
+#appSubtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-text);
+}
+
+/* -----------------------------
+   4. Main Content / Centering
+   ----------------------------- */
+#mainContent {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+/* -----------------------------
+   5. Login Card
+   ----------------------------- */
+#loginSection {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 40px 32px;
+  animation: fadeInCard 0.6s ease both;
+}
+
+#loginHeading {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-heading-text);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* -----------------------------
+   6. Form Layout
+   ----------------------------- */
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#usernameFieldGroup,
+#passwordFieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#loginForm label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-heading-text);
+}
+
+/* -----------------------------
+   7. Inputs
+   ----------------------------- */
+#username,
+#password {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: var(--font-base);
+  color: var(--color-heading-text);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+#username:focus,
+#password:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* -----------------------------
+   8. Login Button
+   ----------------------------- */
+#loginBtn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font-base);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+#loginBtn:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(21, 101, 192, 0.25);
+}
+
+#loginBtn:active {
+  transform: scale(0.99);
+}
+
+#loginBtn:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+/* -----------------------------
+   9. Error Message
+   ----------------------------- */
+/* The HTML uses the [hidden] attribute to hide this by default.
+   Styling below applies whenever it is shown (hidden attribute removed). */
+#errorMessageContainer {
+  background-color: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  transition: opacity var(--transition-fast);
+}
+
+#errorMessage {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-error-text);
+  text-align: center;
+}
+
+/* -----------------------------
+   10. Page Footer
+   ----------------------------- */
+#pageFooter {
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+}
+
+#footerText {
+  font-size: 12px;
+  color: var(--color-gray-text);
+}
+
+/* -----------------------------
+   11. Animations
+   ----------------------------- */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #loginSection {
+    animation: none;
+  }
+  #loginBtn:hover {
+    transform: none;
+  }
+}
+
+/* -----------------------------
+   12. Responsive Design
+   ----------------------------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  #loginSection {
+    max-width: 360px;
+    padding: 32px 24px;
+  }
+
+  #appTitle {
+    font-size: 22px;
+  }
+
+  #hospitalLogo {
+    font-size: 42px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #pageHeader {
+    padding: 20px 12px 6px;
+  }
+
+  #mainContent {
+    padding: 16px 12px;
+  }
+
+  #loginSection {
+    max-width: 100%;
+    padding: 28px 20px;
+    border-radius: var(--radius-sm);
+  }
+
+  #appTitle {
+    font-size: 20px;
+  }
+
+  #appSubtitle {
+    font-size: 13px;
+  }
+
+  #hospitalLogo {
+    font-size: 36px;
+  }
+
+  #loginBtn {
+    padding: 12px 14px;
+  }
+}

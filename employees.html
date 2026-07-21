@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header id="pageHeader">
+    <div id="headerLeft">
+      <div id="hospitalLogo" role="img" aria-label="Hospital logo">🏥</div>
+      <h1 id="appTitle">Hospital Employee Management System</h1>
+    </div>
+    <div id="headerRight">
+      <span id="welcomeMessage">Welcome Admin</span>
+      <button type="button" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <div id="appLayout">
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" aria-label="Main navigation">
+      <ul id="sidebarMenu">
+        <li id="dashboardMenuItem">
+          <a href="dashboard.html" id="dashboardMenu">Dashboard</a>
+        </li>
+        <li id="employeeMenuItem">
+          <a href="employees.html" id="employeeMenu" aria-current="page">Employees</a>
+        </li>
+        <li id="reportsMenuItem">
+          <a href="#" id="reportsMenu">Reports</a>
+        </li>
+        <li id="settingsMenuItem">
+          <a href="#" id="settingsMenu">Settings</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+      <section id="employeeManagementSection" aria-labelledby="employeeManagementHeading">
+        <h2 id="employeeManagementHeading">Employee Management</h2>
+        <p id="employeeManagementSubtitle">Manage Hospital Employees</p>
+
+        <!-- Employee Form -->
+        <form id="employeeForm" name="employeeForm" novalidate>
+          <div id="employeeIdFieldGroup">
+            <label for="employeeId" id="employeeIdLabel">Employee ID</label>
+            <input type="text" id="employeeId" name="employeeId" autocomplete="off">
+          </div>
+
+          <div id="employeeNameFieldGroup">
+            <label for="employeeName" id="employeeNameLabel">Employee Name</label>
+            <input type="text" id="employeeName" name="employeeName" autocomplete="off">
+          </div>
+
+          <div id="departmentFieldGroup">
+            <label for="department" id="departmentLabel">Department</label>
+            <select id="department" name="department">
+              <option value="" id="departmentOptionPlaceholder" disabled selected>-- Select Department --</option>
+              <option value="Cardiology" id="departmentOptionCardiology">Cardiology</option>
+              <option value="Neurology" id="departmentOptionNeurology">Neurology</option>
+              <option value="Orthopedics" id="departmentOptionOrthopedics">Orthopedics</option>
+              <option value="Emergency" id="departmentOptionEmergency">Emergency</option>
+            </select>
+          </div>
+
+          <div id="roleFieldGroup">
+            <label for="role" id="roleLabel">Role</label>
+            <select id="role" name="role">
+              <option value="" id="roleOptionPlaceholder" disabled selected>-- Select Role --</option>
+              <option value="Doctor" id="roleOptionDoctor">Doctor</option>
+              <option value="Nurse" id="roleOptionNurse">Nurse</option>
+              <option value="Admin" id="roleOptionAdmin">Admin</option>
+            </select>
+          </div>
+
+          <div id="emailFieldGroup">
+            <label for="email" id="emailLabel">Email</label>
+            <input type="email" id="email" name="email" autocomplete="off">
+          </div>
+
+          <div id="phoneFieldGroup">
+            <label for="phone" id="phoneLabel">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="off">
+          </div>
+
+          <div id="statusFieldGroup">
+            <label for="status" id="statusLabel">Status</label>
+            <select id="status" name="status">
+              <option value="" id="statusOptionPlaceholder" disabled selected>-- Select Status --</option>
+              <option value="Active" id="statusOptionActive">Active</option>
+              <option value="Inactive" id="statusOptionInactive">Inactive</option>
+            </select>
+          </div>
+
+          <!-- Form Action Buttons -->
+          <div id="formActions">
+            <button type="button" id="addEmployeeBtn">Add Employee</button>
+            <button type="button" id="updateEmployeeBtn">Update Employee</button>
+            <button type="button" id="deleteEmployeeBtn">Delete Employee</button>
+            <button type="button" id="clearBtn">Clear Form</button>
+          </div>
+        </form>
+
+        <!-- Search -->
+        <div id="searchContainer">
+          <label for="searchEmployee" id="searchEmployeeLabel">Search Employee</label>
+          <input type="search" id="searchEmployee" name="searchEmployee" placeholder="Search by Employee Name" autocomplete="off">
+        </div>
+
+        <!-- Employee Table -->
+        <table id="employeeTable">
+          <thead>
+            <tr>
+              <th scope="col" id="colEmployeeId">Employee ID</th>
+              <th scope="col" id="colEmployeeName">Employee Name</th>
+              <th scope="col" id="colDepartment">Department</th>
+              <th scope="col" id="colRole">Role</th>
+              <th scope="col" id="colEmail">Email</th>
+              <th scope="col" id="colPhone">Phone</th>
+              <th scope="col" id="colStatus">Status</th>
+              <th scope="col" id="colActions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="employeeTableBody">
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="pageFooter">
+    <p id="footerText">&copy; 2026 Hospital Employee Management System</p>
+  </footer>
+
+  <script src="js/employee.js"></script>
+</body>
+</html>
