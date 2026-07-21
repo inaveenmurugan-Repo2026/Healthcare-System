@@ -6,8 +6,9 @@
 /* -----------------------------
    1. CSS Variables / Theme
    ----------------------------- */
+   updated login btn clr to blue
 :root {
-  --color-primary: #1565c0;
+  --color-primary: #1565c0; 
   --color-primary-dark: #1e7e34;
   --color-primary-light: #e9f7ef;
 
@@ -189,7 +190,7 @@ body {
 }
 
 #loginBtn:hover {
-  background-color: #28a745;
+  --color-primary: #1565c0;
   transform: scale(1.02);
   box-shadow: 0 6px 16px rgba(21, 101, 192, 0.25);
 }
