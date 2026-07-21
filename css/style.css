@@ -7,9 +7,9 @@
    1. CSS Variables / Theme
    ----------------------------- */
 :root {
-  --color-primary: #1565c0;
-  --color-primary-dark: #0d47a1;
-  --color-primary-light: #e3f2fd;
+  --color-primary: #28a745;
+  --color-primary-dark: #1e7e34;
+  --color-primary-light: #e9f7ef;
 
   --color-white: #ffffff;
   --color-gray-bg: #f4f6f8;
@@ -24,7 +24,7 @@
   --radius-md: 12px;
   --radius-sm: 8px;
 
-  --shadow-card: 0 10px 30px rgba(21, 101, 192, 0.12);
+  --shadow-card: 0 10px 30px rgba(40, 167, 69, 0.12);
 
   --transition-fast: 0.3s ease;
 
@@ -180,7 +180,7 @@ body {
   font-weight: 600;
   font-family: var(--font-base);
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background-color: #28a745;
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
@@ -189,7 +189,7 @@ body {
 }
 
 #loginBtn:hover {
-  background-color: var(--color-primary-dark);
+  background-color: #28a745;
   transform: scale(1.02);
   box-shadow: 0 6px 16px rgba(21, 101, 192, 0.25);
 }
@@ -245,6 +245,7 @@ body {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -255,6 +256,7 @@ body {
   #loginSection {
     animation: none;
   }
+
   #loginBtn:hover {
     transform: none;
   }
