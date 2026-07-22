@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +16,8 @@
     <header id="pageHeader">
 
         <!-- Hospital Logo -->
-        <div id="hospitalLogo">
-            <img
-                src="images/hospital-logo.png"
-                alt="Hospital Logo"
-                id="hospitalLogoImage">
+        <div id="hospitalLogo" role="img" aria-label="Hospital Logo">
+            🏥
         </div>
 
         <h1 id="appTitle">
@@ -50,13 +48,8 @@
                         Username
                     </label>
 
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        placeholder="Enter Username"
-                        autocomplete="username"
-                        required>
+                    <input type="text" id="username" name="username" placeholder="Enter Username"
+                        autocomplete="username" required>
 
                 </div>
 
@@ -67,30 +60,20 @@
                         Password
                     </label>
 
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Enter Password"
-                        autocomplete="current-password"
-                        required>
+                    <input type="password" id="password" name="password" placeholder="Enter Password"
+                        autocomplete="current-password" required>
 
                 </div>
 
                 <!-- Error -->
-                <div
-                    id="errorMessageContainer"
-                    role="alert"
-                    aria-live="assertive">
+                <div id="errorMessageContainer" role="alert" aria-live="assertive">
 
                     <p id="errorMessage" hidden></p>
 
                 </div>
 
                 <!-- Login -->
-                <button
-                    type="submit"
-                    id="loginBtn">
+                <button type="submit" id="loginBtn">
 
                     Login
 
@@ -114,4 +97,5 @@
     <script src="js/auth.js"></script>
 
 </body>
+
 </html>
