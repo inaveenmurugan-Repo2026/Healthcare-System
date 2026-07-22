@@ -7,24 +7,29 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Favicon (Optional - Add favicon.ico in assets folder if available) -->
-    <!-- <link rel="icon" href="assets/favicon.ico"> -->
 </head>
 
 <body>
 
     <!-- Header -->
     <header id="pageHeader">
-        <div id="hospitalLogo" role="img" aria-label="Hospital Logo">
-            🏥
+
+        <!-- Hospital Logo -->
+        <div id="hospitalLogo">
+            <img
+                src="images/hospital-logo.png"
+                alt="Hospital Logo"
+                id="hospitalLogoImage">
         </div>
 
-        <h1 id="appTitle">Hospital Employee Management System</h1>
+        <h1 id="appTitle">
+            Hospital Employee Management System
+        </h1>
 
         <p id="appSubtitle">
             Secure Employee Portal
         </p>
+
     </header>
 
     <!-- Main Content -->
@@ -32,14 +37,16 @@
 
         <section id="loginSection" aria-labelledby="loginHeading">
 
-            <h2 id="loginHeading">Employee Login</h2>
+            <h2 id="loginHeading">
+                Employee Login
+            </h2>
 
             <form id="loginForm" novalidate>
 
                 <!-- Username -->
                 <div id="usernameFieldGroup">
 
-                    <label for="username" id="usernameLabel">
+                    <label for="username">
                         Username
                     </label>
 
@@ -49,17 +56,14 @@
                         name="username"
                         placeholder="Enter Username"
                         autocomplete="username"
-                        required
-                        title="Username is required"
-                        aria-required="true"
-                    >
+                        required>
 
                 </div>
 
                 <!-- Password -->
                 <div id="passwordFieldGroup">
 
-                    <label for="password" id="passwordLabel">
+                    <label for="password">
                         Password
                     </label>
 
@@ -69,28 +73,27 @@
                         name="password"
                         placeholder="Enter Password"
                         autocomplete="current-password"
-                        required
-                        title="Password is required"
-                        aria-required="true"
-                    >
+                        required>
 
                 </div>
 
-                <!-- Error Message -->
+                <!-- Error -->
                 <div
                     id="errorMessageContainer"
                     role="alert"
-                    aria-live="assertive"
-                >
+                    aria-live="assertive">
+
                     <p id="errorMessage" hidden></p>
+
                 </div>
 
-                <!-- Login Button -->
+                <!-- Login -->
                 <button
                     type="submit"
-                    id="loginBtn"
-                    name="loginBtn">
+                    id="loginBtn">
+
                     Login
+
                 </button>
 
             </form>
@@ -103,12 +106,11 @@
     <footer id="pageFooter">
 
         <p id="footerText">
-            &copy; 2026 Hospital Employee Management System
+            © 2026 Hospital Employee Management System
         </p>
 
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/auth.js"></script>
 
 </body>
